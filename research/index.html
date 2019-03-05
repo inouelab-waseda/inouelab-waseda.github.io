@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Research | 井上研究室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="グラフィカルモデルの構造推定 たとえば、工業機械に取り付けられた温度・湿度・圧力センサーなどの時間的に変化するデータから、センサー同士の関係性を推定する問題を、グラフィカルモデルの構造推定と呼びます。構造推定を行うことで、センサーデータから現在・将来の異常を検出する異常検知などの問題に役立てることができます。(論文) RGB-Dセンサーによるリアルタイムトラッキング 物体をリアルタイムにトラッキン">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research">
+<meta property="og:url" content="http://www.eb.waseda.ac.jp/m_inoue/research/index.html">
+<meta property="og:site_name" content="井上研究室">
+<meta property="og:description" content="グラフィカルモデルの構造推定 たとえば、工業機械に取り付けられた温度・湿度・圧力センサーなどの時間的に変化するデータから、センサー同士の関係性を推定する問題を、グラフィカルモデルの構造推定と呼びます。構造推定を行うことで、センサーデータから現在・将来の異常を検出する異常検知などの問題に役立てることができます。(論文) RGB-Dセンサーによるリアルタイムトラッキング 物体をリアルタイムにトラッキン">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/structure-learning.png">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/tracking.png">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/lenna-recompose.png">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/ct-recompose.png">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/cnn-speaker-recognition.png">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/haplotype1.jpg">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/haplotype2-300x40.jpg">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/haplotype3.jpg">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/img_spin.jpg">
+<meta property="og:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/sasei1.png">
+<meta property="og:updated_time" content="2019-03-05T05:09:40.456Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research">
+<meta name="twitter:description" content="グラフィカルモデルの構造推定 たとえば、工業機械に取り付けられた温度・湿度・圧力センサーなどの時間的に変化するデータから、センサー同士の関係性を推定する問題を、グラフィカルモデルの構造推定と呼びます。構造推定を行うことで、センサーデータから現在・将来の異常を検出する異常検知などの問題に役立てることができます。(論文) RGB-Dセンサーによるリアルタイムトラッキング 物体をリアルタイムにトラッキン">
+<meta name="twitter:image" content="http://www.eb.waseda.ac.jp/m_inoue/research/image/structure-learning.png">
+  
+
+  
+
+  <link rel="icon" href="/m_inoue/css/images/logo.png">
+  <link rel="apple-touch-icon" href="/m_inoue/css/images/logo.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/m_inoue/css/style.css">
+
+  <script src="/m_inoue/js/jquery-3.1.1.min.js"></script>
+  <script src="/m_inoue/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/m_inoue/css/bootstrap.css">
+
+  
+    <link rel="stylesheet" href="/m_inoue/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/m_inoue/css/header-post.css">
+  
+
+  
+    <link rel="stylesheet" href="/m_inoue/css/archive.css">
+  
+  
+  
+
+</head>
+</html>
+
+
+  <body>
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;">
+                  <img width="124px" height="124px" alt="井上研究室" src="/m_inoue/css/images/logo.png">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/about">About</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/research">Research</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/achievement">Achievement</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/downloads">Downloads</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/member">Member</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/m_inoue/access">Access</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="index.search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://www.eb.waseda.ac.jp/m_inoue"></form>
+
+</div></li>
+            </ul></div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      Research
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/m_inoue/research/index.html" class="article-date">
+	  <time datetime="2017-05-17T14:22:21.000Z" itemprop="datePublished">2017-05-17</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="グラフィカルモデルの構造推定"><a href="#グラフィカルモデルの構造推定" class="headerlink" title="グラフィカルモデルの構造推定"></a>グラフィカルモデルの構造推定</h3><p><img style="max-width:480px" src="image/structure-learning.png" alt="物体をリアルタイムトラッキング"></p>
+<p>たとえば、工業機械に取り付けられた温度・湿度・圧力センサーなどの時間的に変化するデータから、センサー同士の関係性を推定する問題を、グラフィカルモデルの構造推定と呼びます。構造推定を行うことで、センサーデータから現在・将来の異常を検出する異常検知などの問題に役立てることができます。<a href="https://arxiv.org/abs/1807.00944" target="_blank" rel="noopener">(論文)</a></p>
+<h3 id="RGB-Dセンサーによるリアルタイムトラッキング"><a href="#RGB-Dセンサーによるリアルタイムトラッキング" class="headerlink" title="RGB-Dセンサーによるリアルタイムトラッキング"></a>RGB-Dセンサーによるリアルタイムトラッキング</h3><p><img style="max-width:480px" src="image/tracking.png" alt="物体をリアルタイムトラッキング"></p>
+<p>物体をリアルタイムにトラッキングすることはロボットや AR の発展において非常に重要です。しかし、物体は常に同じように見えているわけではなく、姿勢が変わったり変形したり一部が隠れたりします。<br>そこで、近年普及してきた RGB-D センサーから得られるデータを使用して、姿勢変化、変形、オクルージョンにロバストなリアルタイムトラッキング手法を開発しました。さらにその方法を用いて、逐次的に物体形状を学習して、段階的に強固になるトラッキング方法の開発を目指します。</p>
+<hr>
+<h3 id="MRI画像の再構成"><a href="#MRI画像の再構成" class="headerlink" title="MRI画像の再構成"></a>MRI画像の再構成</h3><p><img style="max-width:640px" src="image/lenna-recompose.png" alt="事前知識なし(左)/事前知識あり(右)"></p>
+<p>医療画像を再構成する手法である MRI には現在、撮像時間が長く患者の負担になるという問題点があります。この問題を解決するために、コイルを複数個用いたり、圧縮センシングという手法で、少ない観測データ数からきれいな画像を再構成し時間の短縮を図ります。このとき様々な事前知識を想定したり，それらを組み合わせたりすることでより良い画像の再構成を目指します。</p>
+<hr>
+<h3 id="CT画像の再構成"><a href="#CT画像の再構成" class="headerlink" title="CT画像の再構成"></a>CT画像の再構成</h3><p><img width="60%" src="image/ct-recompose.png"></p>
+<p>X 線 CT 検査は被ばくを伴う放射線を使用しており、使用線量の低減が必要です。検査の円筒機器内において X 線を当てる方向の数を間引くことでこれを実現し、圧縮センシングと呼ばれる技術を用いて、十分量用いた時と同等の質の画像を得ることを目指します。<br>圧縮センシングとは、事前分布を用いて少数の観測から対象の事後分布やその MAP 解を求める手法です。本研究においては、 CT 画像の“本来画像として持つ性質”が事前分布に対応します。</p>
+<hr>
+<h3 id="話者認識"><a href="#話者認識" class="headerlink" title="話者認識"></a>話者認識</h3><p><img src="image/cnn-speaker-recognition.png" alt="今回用いたモデル"></p>
+<p>話者認識は予め人の声を登録しておき、発話した人が登録話者の中の誰か、また登録話者であるかないかを識別する人の声を使った生体認証システムの一種です。しかし現段階での話者認識システムは、他の生体認証システムと比べデータ入力時間（発話時間）が長く、識別制度も不十分であるという問題があります。<br>この問題を解決するために、短い音声波形から重要な特徴量を抽出する事、得られた特徴量を使って効率よく学習する方法の考案を目指しています。</p>
+<hr>
+<h3 id="haplotype推定問題"><a href="#haplotype推定問題" class="headerlink" title="haplotype推定問題"></a>haplotype推定問題</h3><p>　病期の予後，薬剤の効果・副作用はhaplotype依存なので，どの二つのhaplotypeを持っているかを推定できれば，一人ひとりに応じた診断や治療が可能になる筈です．しかし，通常の方法では個々のhaplotypeは直接測定できず，両親から貰ったhaplotypeが合体した形で測定されます．次の二つのhaplotypeを持っていてSNPが3(=N)箇所ある場合</p>
+<p><img src="image/haplotype1.jpg" alt="1"></p>
+<p>観測されるのは</p>
+<p><img src="image/haplotype2-300x40.jpg" alt="2"></p>
+<p>観測データから考えられる可能性は4(=2^(N-1))通り<br>作られる可能性のあるタンパク質の種類は8(=2^N)通り</p>
+<p><img src="image/haplotype3.jpg" alt="3"></p>
+<p>→ 親戚や同じ人種のデータがあれば推定可能……<br>しかし，SNPが100箇所あったら2^100通りの可能性 → 計算しきれない<br>この計算を近似的に何とかやる方法を研究しています．</p>
+<hr>
+<h3 id="構造解析-モデル選択-問題"><a href="#構造解析-モデル選択-問題" class="headerlink" title="構造解析(モデル選択)問題"></a>構造解析(モデル選択)問題</h3><p>　推定されたhaplotypeと診療における特徴をどのように結び付けるか，という問題は，簡単な解き方もあるのですが，性能がいまひとつです． 複雑なデータは通常，階層構造などの構造を持っていますので，どのような構造が最適かを決めることができれば，大きな手掛かりとなります．なるべく汎用的な手法を開発する研究をしています．</p>
+<hr>
+<h3 id="相転移・スピングラス"><a href="#相転移・スピングラス" class="headerlink" title="相転移・スピングラス"></a>相転移・スピングラス</h3><p>　多くの素子が互いに影響を及ぼし合う高次元の世界では，３次元世界の私たちには想像できないような不思議な現象が起こります．相転移現象や，スピングラス状態などです．これは現実の物質に限定されたことではなく，抽象化された情報の世界でも同じで，物質的な制約を取っ払ったものを研究しています．<br> 高次元分布は直感的な理解が難しいため，平面に射影させた図．相互作用の仕方(左は2体相互作用，右は3体相互作用)というミクロのルールによって，大きく異なるマクロ状態が出現する．<br><img src="image/img_spin.jpg" alt="4"></p>
+<hr>
+<h3 id="誤り訂正符号・歪あり圧縮"><a href="#誤り訂正符号・歪あり圧縮" class="headerlink" title="誤り訂正符号・歪あり圧縮"></a>誤り訂正符号・歪あり圧縮</h3><p>　誤り訂正符号は，ノイズのある通信路で正しく通信を行う基盤技術です．性能を理論的な限界に近づける復号アルゴリズムの研究などを研究しています． 歪あり圧縮は誤り訂正符号の『裏返し』の問題で，解くのは更に難しいとされています．</p>
+<hr>
+<h3 id="一次視覚野情報からの画像推定"><a href="#一次視覚野情報からの画像推定" class="headerlink" title="一次視覚野情報からの画像推定"></a>一次視覚野情報からの画像推定</h3><p>　視覚情報は脳の一次視覚野などで様々な処理をされています．ここでの神経活動を詳細に計測できれば，今，何を見ているかが逆に分かるかもしれません．更に，頭の中で想像しているものや，夢すらも画像として再現することが可能かもしれません．</p>
+<hr>
+<h3 id="嗄声評価法の開発"><a href="#嗄声評価法の開発" class="headerlink" title="嗄声評価法の開発"></a>嗄声評価法の開発</h3><p>　情報処理の一側面は，混ざってしまったものを選り分けることです．１や５では欲しいデータ自体が混ざっていますが，多くの場合は，４のように信号とノイズが混ざっています．何れにせよ，これを分離できればめでたしです．しゃがれ声の診断も，声のきれいな成分とノイズ成分に分離できれば良いのです．<br><img src="image/sasei1.png" alt="4"><br>音の問題は，様々な情報が一次元時系列データに潰されている上，ヒトの聴覚が様々な特徴抽出をしているため，非常に 難しい問題です．</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+<!-- Table of Contents -->
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2018 - 2019 井上研究室 All Rights Reserved.</p>
+	      
+	      
+  		   	<p id="copyRightCn">早稲田大学 hold copyright</p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/m_inoue/" class="mobile-nav-link">Home</a>
+  
+    <a href="/m_inoue/about" class="mobile-nav-link">About</a>
+  
+    <a href="/m_inoue/research" class="mobile-nav-link">Research</a>
+  
+    <a href="/m_inoue/achievement" class="mobile-nav-link">Achievement</a>
+  
+    <a href="/m_inoue/downloads" class="mobile-nav-link">Downloads</a>
+  
+    <a href="/m_inoue/member" class="mobile-nav-link">Member</a>
+  
+    <a href="/m_inoue/access" class="mobile-nav-link">Access</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/m_inoue/fancybox/jquery.fancybox.css">
+  <script src="/m_inoue/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/m_inoue/js/scripts.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            井上研究室
+          </div>
+          <div class="panel-body">
+            Copyright © 2019 早稲田大学 All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/m_inoue/js/totop.js?v=1.0.0" async=""></script>
+  
+</body>
+</html>
