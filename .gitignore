@@ -1,0 +1,7 @@
+node_modules/
+public/
+public_html/
+db.json
+package-lock.json
+deploy_key
+deploy_key.pub
