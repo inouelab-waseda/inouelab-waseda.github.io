@@ -8,6 +8,11 @@ branches:
   - develop
 
 before_install:
+- openssl aes-256-cbc -K $encrypted_162225fc2458_key -iv $encrypted_162225fc2458_iv
+  -in deploy_key.enc -out deploy_key -d
+- chmod 600 ./deploy_key
+- echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- ssh-add ./deploy_key
 - npm install hexo-cli -g
 
 install:
@@ -16,7 +21,6 @@ install:
 before_script:
 - git config --global user.name 'Inouelab Admin'
 - git config --global user.email 'inouelab.calc@gmail.com'
-  - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/id_rsa\n" >> ~/.ssh/config
 
 script:
 - hexo generate

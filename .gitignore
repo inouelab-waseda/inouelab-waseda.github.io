@@ -3,3 +3,4 @@ public/
 public_html/
 db.json
 package-lock.json
+deploy_key
