@@ -39,7 +39,7 @@ $ hexo install
 # 記事の更新
 **必ず `develop` ブランチで変更を行うこと。絶対に `master` ブランチを触ってはいけない。(普通に使っている限り、`master` ブランチを操作する必要性はないはず。ただし、メンテナンスなどの目的がある場合は別。)**
 
-`souces` 以下にある .md ファイルを書き換えて、変更を push する。この手順も、GitHub Desktop 等でやってもよい。
+`souces` 以下にある .md ファイルを書き換えて、変更を commit&push する。この手順も、GitHub Desktop 等でやってよい。
 
 ```
 $ git add .
