@@ -1,32 +1,53 @@
 # 井上研Webサイト用のファイル
-## 使い方
-1. 何とかしてhexoをインストール(node.jsとかnpmとかが必要だったけど調べてくれ)
-2. .mdファイルなどを編集して `hexo generate`
-3. `public/index.html`のheadタグ内に以下を記述。
+## インストール
+まず、依存ライブラリをインストールする。
 
-```js
-<script>      
-
-    if(window.location.href.match(/^https?:\/\/(?:www\.)?eb\.waseda\.ac\.jp\/m_inoue.*/))
-    {
-        window.location = "http://www.inoue.eb.waseda.ac.jp/"
-    }
-
-</script>
 ```
-4. `public`を`public_html`という名前に変更して電生のサーバに置く。
+$ sudo apt install curl git
+$ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+$ sudo apt install nodejs
+```
 
-## 電生のサーバへの置き方
-`FileZilla`というアプリを使用
-- 接続先の登録
+以下でインストールできていることを確認。
+
 ```
-ホスト: hosting2.mse.waseda.ac.jp 
-プロトコル: FTP - ファイル転送プロトコル
-ポート: 21
-暗号化: 平文
-ログオンの種類: 通常
-ユーザ: inoueebw
-パス: 管理者パス
-転送モード: パッシブ
+$ node -v
+$ npm -v
 ```
-研究室内から接続すると繋がらない？説がある。
+
+次に、このリポジトリをクローンする。ここは GitHub Desktop 等でやってもよい。なお、以下の方法でクローンする場合は ssh 鍵の登録が必要なので、[公式ヘルプ](https://help.github.com/en/articles/connecting-to-github-with-ssh)などを見て設定しておく。
+
+```
+$ git clone git@github.com:inouelab-waseda/inouelab-waseda.github.io.git
+```
+
+Hexo をインストール。
+
+```
+$ npm install -g hexo-cli
+```
+
+リポジトリの中で、依存 JS ライブラリをインストール。
+
+```
+$ cd inouelab-waseda.github.io
+$ hexo install
+```
+
+これで環境設定は済んでいるはず。
+
+
+# 記事の更新
+**必ず `develop` ブランチで変更を行うこと。<span color="red">絶対に `master` ブランチを触ってはいけない。</span>(普通に使っている限り、`master` ブランチを操作する必要性はないはず。ただし、メンテナンスなどの目的がある場合は別。)**
+
+`souces` 以下にある .md ファイルを書き換えて、変更を push する。この手順も、GitHub Desktop 等でやってもよい。
+
+```
+$ git add .
+$ git commit
+$ git push origin develop
+```
+
+
+
+
