@@ -39,7 +39,7 @@ $ npm install -g hexo-cli
 
 ```
 $ cd inouelab-waseda.github.io
-$ hexo install
+$ npm install
 ```
 
 これで環境設定は済んでいるはず。
