@@ -1,4 +1,6 @@
 # 井上研 Web サイト
+[![Build Status](https://travis-ci.com/inouelab-waseda/inouelab-waseda.github.io.svg?token=Mrut1ndyQxAoj1EUaCj8&branch=develop)](https://travis-ci.com/inouelab-waseda/inouelab-waseda.github.io)
+
 ## インストール
 まず、依存ライブラリをインストールする。
 
