@@ -2,11 +2,19 @@
 ## インストール
 まず、依存ライブラリをインストールする。
 
+Ubuntu であれば、以下のコマンドを打つだけでよい。
+
 ```
 $ sudo apt install curl git
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 $ sudo apt install nodejs
 ```
+
+Mac、Windows に関しては以下の公式サイトからインストーラーをダウンロードしてインストールする。
+
+- Node.js: https://nodejs.org/
+- Git: https://git-scm.com/
+
 
 以下でインストールできていることを確認。
 
