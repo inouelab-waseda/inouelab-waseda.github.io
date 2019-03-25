@@ -12,8 +12,8 @@ $ sudo apt install nodejs
 
 Mac、Windows に関しては以下の公式サイトからインストーラーをダウンロードしてインストールする。
 
-- Node.js: https://nodejs.org/
 - Git: https://git-scm.com/
+- Node.js: https://nodejs.org/
 
 
 以下でインストールできていることを確認。
