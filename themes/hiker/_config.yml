@@ -34,12 +34,12 @@ home_background_image:
   enable: true
   rolling: true
   url: [css/images/1.jpg, css/images/2.jpg, css/images/3.jpg, css/images/4.jpg, css/images/5.jpg,
-        css/images/6.jpg, css/images/7.jpg, css/images/8.jpg, css/images/9.jpg, css/images/10.jpg]
+        css/images/6.jpg, css/images/7.jpg, css/images/8.jpg, css/images/9.jpg, css/images/10.jpg, css/images/11.jpg]
 
 home_logo_image:
   enable: false
   border: false
-  url: 
+  url:
 
 # AboutPage background
 about_big_image: css/images/2.jpg
