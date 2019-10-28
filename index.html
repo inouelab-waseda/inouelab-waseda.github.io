@@ -285,6 +285,27 @@
                       };
                   </script>
                 
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img10" src="/css/images/11.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img10 = new Image();
+                      var imageTag10 = document.getElementById("carousel-img10");
+                      img10.src = imageTag10.src;
+                      img10.onload=function(){
+                        if (img10.width / img10.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag10.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag10.style.height = document.body.clientHeight + "px";
+                          imageTag10.style.marginLeft = -(document.body.clientHeight * img10.width / img10.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
             </div>
 
             <!-- Controls -->
