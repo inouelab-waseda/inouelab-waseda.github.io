@@ -40,7 +40,7 @@ template {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: YuGothicM;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -308,7 +308,7 @@ html {
 }
 
 body {
-  font-family: meiryo,Helvetica Neue,Helvetica,Arial,sans-serif
+  font-family: YuGothicM,Helvetica Neue,Helvetica,Arial,sans-serif
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
