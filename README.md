@@ -1,5 +1,5 @@
 # 井上研 Web サイト
-[![Build Status](https://travis-ci.com/inouelab-waseda/inouelab-waseda.github.io.svg?token=Mrut1ndyQxAoj1EUaCj8&branch=develop)](https://travis-ci.com/inouelab-waseda/inouelab-waseda.github.io)
+[![github pages](https://github.com/inouelab-waseda/inouelab-waseda.github.io/workflows/github%20pages/badge.svg)](https://travis-ci.com/inouelab-waseda/inouelab-waseda.github.io)
 
 ## インストール
 まず、依存ライブラリをインストールする。
@@ -31,11 +31,6 @@ $ npm -v
 $ git clone git@github.com:inouelab-waseda/inouelab-waseda.github.io.git
 ```
 
-Hexo をインストール。
-
-```
-$ npm install -g hexo-cli
-```
 
 リポジトリの中で、依存 JS ライブラリをインストール。
 
@@ -45,6 +40,13 @@ $ npm install
 ```
 
 これで環境設定は済んでいるはず。
+
+実際にページが観れるかローカルでビルドするには
+```
+$ npm run generate
+$ npm start
+http://localhost:4000/にアクセス
+```
 
 # 記事の更新
 **必ず `develop` ブランチで変更を行うこと。絶対に `master` ブランチを触ってはいけない。(普通に使っている限り、`master` ブランチを操作する必要性はないはず。ただし、メンテナンスなどの目的がある場合は別。)**
