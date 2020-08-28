@@ -32,7 +32,7 @@ $ git clone git@github.com:inouelab-waseda/inouelab-waseda.github.io.git
 ```
 
 
-リポジトリの中で、依存 JS ライブラリをインストール。
+### リポジトリの中で、依存 JS ライブラリをインストール。
 
 ```
 $ cd inouelab-waseda.github.io
@@ -41,12 +41,12 @@ $ npm install
 
 これで環境設定は済んでいるはず。
 
-実際にページが観れるかローカルでビルドするには
+### 実際にページが観れるかローカルでビルドするには
 ```
 $ npm run generate
 $ npm start
-http://localhost:4000/にアクセス
 ```
+[ビルドされたページ](http://localhost:4000/)にアクセス
 
 # 記事の更新
 **必ず `develop` ブランチで変更を行うこと。絶対に `master` ブランチを触ってはいけない。(普通に使っている限り、`master` ブランチを操作する必要性はないはず。ただし、メンテナンスなどの目的がある場合は別。)**
