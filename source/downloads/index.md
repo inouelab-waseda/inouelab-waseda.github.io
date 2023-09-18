@@ -3,7 +3,7 @@ title: Downloads
 date: 2017-05-17 23:22:48
 ---
 
-![Haplo](image/HaploBorder.jpg)
+<img src="image/HaploBorder.jpg" alt="Haplo">
 
 HaploBorder is software that infers haplotype configurations from unphased multilocus genotype data. See the following paper for more details:
 Grouping preprocess to accurately extend application of EM algorithm to haplotype inference, Journal of Human Genetics, 53(8), 747-756, 2008. [link](http://www.springerlink.com/content/qw1308876201l4g1/?p=8b1c921a6de24defbc0d8aa7c42297f3&pi=8) [pdf (corrected Jan 2010)] 
