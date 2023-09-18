@@ -21,13 +21,13 @@
 <meta property="og:image" content="http://inouelab-waseda.github.io/research/image/lenna-recompose.png">
 <meta property="og:image" content="http://inouelab-waseda.github.io/research/image/ct-recompose.png">
 <meta property="og:image" content="http://inouelab-waseda.github.io/research/image/cnn-speaker-recognition.png">
-<meta property="og:image" content="http://inouelab-waseda.github.io/image/haplotype1.jpg">
-<meta property="og:image" content="http://inouelab-waseda.github.io/image/haplotype2-300x40.jpg">
-<meta property="og:image" content="http://inouelab-waseda.github.io/image/haplotype3.jpg">
-<meta property="og:image" content="http://inouelab-waseda.github.io/image/img_spin.jpg">
-<meta property="og:image" content="http://inouelab-waseda.github.io/image/sasei1.png">
+<meta property="og:image" content="http://inouelab-waseda.github.io/research/image/haplotype1.jpg">
+<meta property="og:image" content="http://inouelab-waseda.github.io/research/image/haplotype2-300x40.jpg">
+<meta property="og:image" content="http://inouelab-waseda.github.io/research/image/haplotype3.jpg">
+<meta property="og:image" content="http://inouelab-waseda.github.io/research/image/img_spin.jpg">
+<meta property="og:image" content="http://inouelab-waseda.github.io/research/image/sasei1.png">
 <meta property="article:published_time" content="2017-05-17T14:22:21.000Z">
-<meta property="article:modified_time" content="2023-09-18T06:57:16.529Z">
+<meta property="article:modified_time" content="2023-09-18T07:43:48.407Z">
 <meta property="article:author" content="早稲田大学">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://inouelab-waseda.github.io/research/image/structure-learning.png">
@@ -191,22 +191,25 @@
 <p>話者認識は予め人の声を登録しておき、発話した人が登録話者の中の誰か、また登録話者であるかないかを識別する人の声を使った生体認証システムの一種です。しかし現段階での話者認識システムは、他の生体認証システムと比べデータ入力時間（発話時間）が長く、識別制度も不十分であるという問題があります。<br>この問題を解決するために、短い音声波形から重要な特徴量を抽出する事、得られた特徴量を使って効率よく学習する方法の考案を目指しています。</p>
 <hr>
 <h3 id="haplotype推定問題"><a href="#haplotype推定問題" class="headerlink" title="haplotype推定問題"></a>haplotype推定問題</h3><p>　病期の予後，薬剤の効果・副作用はhaplotype依存なので，どの二つのhaplotypeを持っているかを推定できれば，一人ひとりに応じた診断や治療が可能になる筈です．しかし，通常の方法では個々のhaplotypeは直接測定できず，両親から貰ったhaplotypeが合体した形で測定されます．次の二つのhaplotypeを持っていてSNPが3(&#x3D;N)箇所ある場合</p>
-<p><img src="/image/haplotype1.jpg" alt="1"></p>
+<img src="image/haplotype1.jpg" alt="1">
+
 <p>観測されるのは</p>
-<p><img src="/image/haplotype2-300x40.jpg" alt="2"></p>
+<img src="image/haplotype2-300x40.jpg" alt="2">
+
 <p>観測データから考えられる可能性は4(&#x3D;2^(N-1))通り<br>作られる可能性のあるタンパク質の種類は8(&#x3D;2^N)通り</p>
-<p><img src="/image/haplotype3.jpg" alt="3"></p>
+<img src="image/haplotype3.jpg" alt="3">
+
 <p>→ 親戚や同じ人種のデータがあれば推定可能……<br>しかし，SNPが100箇所あったら2^100通りの可能性 → 計算しきれない<br>この計算を近似的に何とかやる方法を研究しています．</p>
 <hr>
 <h3 id="構造解析-モデル選択-問題"><a href="#構造解析-モデル選択-問題" class="headerlink" title="構造解析(モデル選択)問題"></a>構造解析(モデル選択)問題</h3><p>　推定されたhaplotypeと診療における特徴をどのように結び付けるか，という問題は，簡単な解き方もあるのですが，性能がいまひとつです． 複雑なデータは通常，階層構造などの構造を持っていますので，どのような構造が最適かを決めることができれば，大きな手掛かりとなります．なるべく汎用的な手法を開発する研究をしています．</p>
 <hr>
-<h3 id="相転移・スピングラス"><a href="#相転移・スピングラス" class="headerlink" title="相転移・スピングラス"></a>相転移・スピングラス</h3><p>　多くの素子が互いに影響を及ぼし合う高次元の世界では，３次元世界の私たちには想像できないような不思議な現象が起こります．相転移現象や，スピングラス状態などです．これは現実の物質に限定されたことではなく，抽象化された情報の世界でも同じで，物質的な制約を取っ払ったものを研究しています．<br> 高次元分布は直感的な理解が難しいため，平面に射影させた図．相互作用の仕方(左は2体相互作用，右は3体相互作用)というミクロのルールによって，大きく異なるマクロ状態が出現する．<br><img src="/image/img_spin.jpg" alt="4"></p>
+<h3 id="相転移・スピングラス"><a href="#相転移・スピングラス" class="headerlink" title="相転移・スピングラス"></a>相転移・スピングラス</h3><p>　多くの素子が互いに影響を及ぼし合う高次元の世界では，３次元世界の私たちには想像できないような不思議な現象が起こります．相転移現象や，スピングラス状態などです．これは現実の物質に限定されたことではなく，抽象化された情報の世界でも同じで，物質的な制約を取っ払ったものを研究しています．<br> 高次元分布は直感的な理解が難しいため，平面に射影させた図．相互作用の仕方(左は2体相互作用，右は3体相互作用)というミクロのルールによって，大きく異なるマクロ状態が出現する．<br><img src="image/img_spin.jpg" alt="4"></p>
 <hr>
 <h3 id="誤り訂正符号・歪あり圧縮"><a href="#誤り訂正符号・歪あり圧縮" class="headerlink" title="誤り訂正符号・歪あり圧縮"></a>誤り訂正符号・歪あり圧縮</h3><p>　誤り訂正符号は，ノイズのある通信路で正しく通信を行う基盤技術です．性能を理論的な限界に近づける復号アルゴリズムの研究などを研究しています． 歪あり圧縮は誤り訂正符号の『裏返し』の問題で，解くのは更に難しいとされています．</p>
 <hr>
 <h3 id="一次視覚野情報からの画像推定"><a href="#一次視覚野情報からの画像推定" class="headerlink" title="一次視覚野情報からの画像推定"></a>一次視覚野情報からの画像推定</h3><p>　視覚情報は脳の一次視覚野などで様々な処理をされています．ここでの神経活動を詳細に計測できれば，今，何を見ているかが逆に分かるかもしれません．更に，頭の中で想像しているものや，夢すらも画像として再現することが可能かもしれません．</p>
 <hr>
-<h3 id="嗄声評価法の開発"><a href="#嗄声評価法の開発" class="headerlink" title="嗄声評価法の開発"></a>嗄声評価法の開発</h3><p>　情報処理の一側面は，混ざってしまったものを選り分けることです．１や５では欲しいデータ自体が混ざっていますが，多くの場合は，４のように信号とノイズが混ざっています．何れにせよ，これを分離できればめでたしです．しゃがれ声の診断も，声のきれいな成分とノイズ成分に分離できれば良いのです．<br><img src="/image/sasei1.png" alt="4"><br>音の問題は，様々な情報が一次元時系列データに潰されている上，ヒトの聴覚が様々な特徴抽出をしているため，非常に 難しい問題です．</p>
+<h3 id="嗄声評価法の開発"><a href="#嗄声評価法の開発" class="headerlink" title="嗄声評価法の開発"></a>嗄声評価法の開発</h3><p>　情報処理の一側面は，混ざってしまったものを選り分けることです．１や５では欲しいデータ自体が混ざっていますが，多くの場合は，４のように信号とノイズが混ざっています．何れにせよ，これを分離できればめでたしです．しゃがれ声の診断も，声のきれいな成分とノイズ成分に分離できれば良いのです．<br><img src="image/sasei1.png" alt="5"><br>音の問題は，様々な情報が一次元時系列データに潰されている上，ヒトの聴覚が様々な特徴抽出をしているため，非常に 難しい問題です．</p>
 
       
     </div>
