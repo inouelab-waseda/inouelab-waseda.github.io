@@ -4,7 +4,7 @@ date: 2025-08-28 14:18:00
 tags:
 ---
 
-<div style="background-color: #f0f8ff; padding: 10px; border-radius: 8px; text-align: center;">
+<div style="background-color: #f0f8ff; padding: 10px 10px 30px 10px; border-radius: 8px; text-align: center;">
   <h2 style="color: #2e8b57;">🎓 2025年度の研究室配属に関するオープンラボの予定が決まりました！</h2>  
 </div>
 
